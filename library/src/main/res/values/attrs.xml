@@ -44,6 +44,8 @@
         <attr name="bpBodyBackgroundColor" format="color"/>
         <attr name="bpBodySelectedTextColor" format="color"/>
         <attr name="bpBodyUnselectedTextColor" format="color"/>
+        <attr name="bpBodySelectedCircleColor" format="color"/>
+        <attr name="bpBodySelectedCircleAlpha" format="integer"/>
 
         <attr name="bpButtonsTextColor" format="color"/>
         <attr name="bpButtonsBackgroundColor" format="color"/>
@@ -55,10 +57,13 @@
         <attr name="bpRadialPointerAlpha" format="integer"/>
 
         <attr name="bpAmPmCircleColor" format="color"/>
+        <attr name="bpAmPmCircleSelectedAlpha" format="integer"/>
+        <attr name="bpAmPmCircleUnselectedAlpha" format="integer"/>
         <attr name="bpAmPmTextColor" format="color"/>
 
         <!--CalendarPicker Specific-->
         <attr name="bpPreHeaderBackgroundColor" format="color"/>
+        <attr name="bpTodayTextColor" format="color"/>
         <attr name="bpDisabledDayTextColor" format="color"/>
         <attr name="bpDisabledDayBackgroundColor" format="color"/>
     </declare-styleable>

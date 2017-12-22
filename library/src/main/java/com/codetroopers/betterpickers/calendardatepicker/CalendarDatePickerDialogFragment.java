@@ -98,6 +98,7 @@ public class CalendarDatePickerDialogFragment extends DialogFragment implements 
     private TextView mYearView;
     private DayPickerView mDayPickerView;
     private YearPickerView mYearPickerView;
+    private LinearLayout mOkCancelButtonsLayout;
 
     private int mCurrentView = UNINITIALIZED;
     private int mWeekStart = mCalendar.getFirstDayOfWeek();
@@ -233,6 +234,7 @@ public class CalendarDatePickerDialogFragment extends DialogFragment implements 
 
         View view = inflater.inflate(R.layout.calendar_date_picker_dialog, null);
 
+        mOkCancelButtonsLayout = (LinearLayout) view.findViewById(R.id.ok_cancel_buttons_layout);
         mSelectedDateLayout = (LinearLayout) view.findViewById(R.id.day_picker_selected_date_layout);
         mDayOfWeekView = (TextView) view.findViewById(R.id.date_picker_header);
         mMonthAndDayView = (LinearLayout) view.findViewById(R.id.date_picker_month_and_day);
@@ -319,7 +321,7 @@ public class CalendarDatePickerDialogFragment extends DialogFragment implements 
                 dismiss();
             }
         });
-        view.findViewById(R.id.ok_cancel_buttons_layout).setBackgroundColor(buttonBgColor);
+        mOkCancelButtonsLayout.setBackgroundColor(buttonBgColor);
 
         updateDisplay(false);
         setCurrentView(currentView);
@@ -502,6 +504,11 @@ public class CalendarDatePickerDialogFragment extends DialogFragment implements 
 
     public CalendarDatePickerDialogFragment setOnDismissListener(OnDialogDismissListener ondialogdismisslistener) {
         mDimissCallback = ondialogdismisslistener;
+        return this;
+    }
+
+    public CalendarDatePickerDialogFragment setButtonsVisibility(int visibility) {
+        mOkCancelButtonsLayout.setVisibility(visibility);
         return this;
     }
 

@@ -37,9 +37,11 @@ public class SimpleMonthView extends MonthView {
                     mSelectedCirclePaint);
         }
 
-        if (mHasToday && mToday == day) {
+        if (mSelectedDay == day) {
+            mMonthNumPaint.setColor(mSelectedTextColor);
+        } else if (mHasToday && mToday == day) {
             mMonthNumPaint.setColor(mTodayNumberColor);
-        } else if (isEnabled) {
+        }else if (isEnabled) {
             mMonthNumPaint.setColor(mDayTextColorEnabled);
         } else {
             mMonthNumPaint.setColor(mDayTextColorDisabled);

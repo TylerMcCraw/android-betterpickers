@@ -31,6 +31,7 @@ public class SampleCalendarDateBasicUsage extends BaseSampleActivity
             public void onClick(View v) {
                 CalendarDatePickerDialogFragment cdp = new CalendarDatePickerDialogFragment()
                         .setOnDateSetListener(SampleCalendarDateBasicUsage.this);
+//                        .setButtonsVisibility(View.GONE);
                 cdp.show(getSupportFragmentManager(), FRAG_TAG_DATE_PICKER);
             }
         });

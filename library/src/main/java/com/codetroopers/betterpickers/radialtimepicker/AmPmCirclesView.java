@@ -98,8 +98,8 @@ public class AmPmCirclesView extends View {
         mUnselectedColor = themeColors.getColor(R.styleable.BetterPickersDialogs_bpAmPmCircleColor, R.color.bpBlue);
         mSelectedColor = themeColors.getColor(R.styleable.BetterPickersDialogs_bpAmPmCircleColor, R.color.bpBlue);
         mAmPmTextColor = themeColors.getColor(R.styleable.BetterPickersDialogs_bpAmPmTextColor, R.color.bpWhite);
-        mSelectedAlpha = 200;
-        mUnselectedAlpha = 50;
+        mSelectedAlpha = themeColors.getInteger(R.styleable.BetterPickersDialogs_bpAmPmCircleSelectedAlpha, 200);
+        mUnselectedAlpha = themeColors.getInteger(R.styleable.BetterPickersDialogs_bpAmPmCircleUnselectedAlpha, 55);
     }
 
     public void setAmOrPm(int amOrPm) {
